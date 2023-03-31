@@ -11,7 +11,7 @@ for Autonomous Driving and Real-time Object Detection
 
 ___
 
-*구현 완료*
+**구현 완료**
 + Pre-segmentation using SOTA
   + detectron2, oneformer 모델 구현
   + oneformer 기반 pre-labeling json 파일 출력 코딩 완료
