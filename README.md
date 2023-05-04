@@ -22,5 +22,8 @@ ___
   + import coco json file
   + json 파일 자동으로 전체 이미지 파일에 대해 매칭하는 부분 구현 완료
 + Labeling Guideline
-  + 현재 가이드라인 작성 중
+  + 현재 가이드라인 작성 완료
   + 프로그램 동작하면서 error/노하우 정리 추가 에정
++ PanopticFCN input json/images 생성
+  + PanopticFCN DeepLab 모델 코드 분석
+  + input json/images 형태로 변환 코드 작성 (Python)
