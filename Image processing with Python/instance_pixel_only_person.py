@@ -27,7 +27,6 @@ def process_image(img_path, img_id, obj_list, label_dict):
     output_path = os.path.join("/home/ubuntu/cw/OneFormer/images/0512_edit/output_images2", new_img_filename)
     Image.fromarray(newImage).save(output_path)
     
-# 수정된 코드
 with open('/home/ubuntu/cw/OneFormer/output_json/RectLabel_coco/0512_edit_coco.json', 'r') as f:
     data = json.load(f)
 
