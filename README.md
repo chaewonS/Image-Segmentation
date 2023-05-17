@@ -30,3 +30,7 @@ ___
 + PanopticFCN input json/images 생성
   + PanopticFCN DeepLab 모델 코드 분석
   + input json/images 형태로 변환 코드 작성 (Python)
+  + InstanceIds.png / color.png / labelIds.png 생성
+  + InstanceIds.png -> RectLabel에서 Export한 all_objects.png (indexed color mask images using class ID) + coco.json (annotations/counts 정보)
+  + color.png 생성 중
+  + labelIds.png 생성 중 
