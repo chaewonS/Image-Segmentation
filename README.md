@@ -4,7 +4,6 @@ for Autonomous Driving and Real-time Object Detection
 
 ## OneFormer: One Transformer to Rule Universal Image Segmentation
 ### Panoptic Segmentation on Cityscapes
-![image](https://user-images.githubusercontent.com/81732426/228160940-6a141375-df12-404c-aecc-348076e2cd34.png)
 ![keti1](https://github.com/chaewonS/Image-Segmentation-Auto-Labeling/assets/81732426/28494afb-8720-495f-82b9-f6c5c01896d8)
 ![keti2](https://github.com/chaewonS/Image-Segmentation-Auto-Labeling/assets/81732426/21ac4c95-80cf-416a-9262-9fd41385f48d)
 ![keti3](https://github.com/chaewonS/Image-Segmentation-Auto-Labeling/assets/81732426/c732ec8a-9580-4eb9-a106-b82686bb6cf0)
