@@ -47,7 +47,7 @@ ___
   + labelIds.png 생성 완료
 + 자동화 스크립트 생성
   + main.py
-  + instance_pixel_all_object_multi.py 
+  + instance_pixel_all_object_multi.py 수정
 ___
 
 ### 1. Pre-segmentation using OneFormer Model
