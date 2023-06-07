@@ -35,9 +35,10 @@ ___
     RectLabel에서 Export한 all_objects.png (indexed color mask images using class ID) + coco.json (annotations/counts 정보)
   + color.png 생성 완료
   + labelIds.png 생성 완료
+___
 
 ### <Pre-segmentation using OneFormer Model>
-
+  
 + (input) sample img -> (output) OneFormer_coco
   > run oneformer_convert_coco_json.ipynb
   + RectLabel import할 coco json 생성
