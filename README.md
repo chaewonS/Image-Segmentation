@@ -38,8 +38,14 @@ ___
 
 ___
 
+### <Pre-segmentation using OneFormer Model>
 
-**<Panoptic FCN input img & json>**
++ (input) sample img -> (output) OneFormer_coco
+  > run oneformer_convert_coco_json.ipynb
+  + RectLabel import할 coco json 생성
+  + OneFormer 모델 (Panoptic Segmentation 높은 정확도)
+
+### <Panoptic FCN input img & json>
   
 + (input) Screenshots -> (output) Color
   > run create_RGBA_multi.py
@@ -62,9 +68,5 @@ ___
   + gtFine_polygons.json 생성
 
 
-**<Pre-segmentation using OneFormer Model>**
-+ (input) sample img -> (output) OneFormer_coco
-  > run oneformer_convert_coco_json.ipynb
-  + RectLabel import할 coco json 생성
-  + OneFormer 모델 (Panoptic Segmentation 높은 정확도)
+
 
