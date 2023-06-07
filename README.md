@@ -14,15 +14,25 @@ for Autonomous Driving and Real-time Object Detection
 #### Oneformer panoptic task ouput image
 
 ___
+## Install
+### CUDA 11.1 + Torch 1.9
+``` pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html ```
+
+### Install detectron2
+``` https://dl.fbaipublicfiles.com/detectron2/wheels/cu111/torch1.9/index.html ```
+
+### Install natten
+``` pip3 install natten==0.14.2 -f https://shi-labs.com/natten/wheels/cu111/torch1.9/index.html ```
+___
 
 **구현 완료**
 + Pre-segmentation using SOTA
   + detectron2, oneformer 모델 구현
   + oneformer 기반 pre-labeling json 파일 출력 코딩 완료
 + RectLabel Modification
-  + oneformer json output interaction 구현 완료
+  + oneformer json output interaction 구현 완료 (coco dataset format)
   + RectLabel Tool 사용법 공부
-  + import coco json file
+  + RectLabel에서 "import coco json file"으로 Import Json 가능
   + json 파일 자동으로 전체 이미지 파일에 대해 매칭하는 부분 구현 완료
 + Labeling Guideline
   + 현재 가이드라인 작성 완료
