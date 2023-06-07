@@ -33,5 +33,39 @@ ___
   + InstanceIds.png / color.png / labelIds.png 생성
   + InstanceIds.png ->  
     RectLabel에서 Export한 all_objects.png (indexed color mask images using class ID) + coco.json (annotations/counts 정보)
-  + color.png 생성 중
-  + labelIds.png 생성 중 
+  + color.png 생성 완료
+  + labelIds.png 생성 완료
+
+___
+
+**Pre-segmentation using SOTA**
++ (input) sample img -> (output) OneFormer_coco
+  > run oneformer_convert_coco_json.ipynb
+  + RectLabel import할 coco json 생성
+  + OneFormer 모델 (Panoptic Segmentation 높은 정확도)
+
+**Panoptic FCN input img & json**
++ (input) Screenshots -> (output) Color
+  > run create_RGBA_multi.py
+  + gtFine_color.png 생성
+  + 투명도 포험, 파일 이름 변경
+
++ (input) All objects & RectLabel_coco json -> (output) InstanceIds
+  > run instance_pixel_all_object_multi.py
+  + gtFine_instanceIds.png 생성
+  + 사람, 자동차 등 (인스턴스 구분 가능한) 객체들 카테고리 ID 입력
+
++ (input) All objects -> (output) LabelIds
+  > run rename.py
+  + gtFine_labelIds.png 생성
+  + 파일 이름 변경
+  
++ (input) Labelme json -> (output) Polygon json
+  > run create_FCN_json.ipynb
+  > run check_polygons_error.py
+  + gtFine_polygons.json 생성
+
+___
+
+
+
