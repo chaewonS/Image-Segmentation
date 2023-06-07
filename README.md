@@ -62,8 +62,7 @@ ___
   + 파일 이름 변경
   
 + (input) Labelme json -> (output) Polygon json
-  > run create_FCN_json.ipynb
-  > run check_polygons_error.py
+  > run create_FCN_json.ipynb & run check_polygons_error.py
   + gtFine_polygons.json 생성
 
 
