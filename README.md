@@ -62,7 +62,7 @@ ___
   + gtFine_polygons.json 생성
 
 
-**Pre-segmentation using OneFormer Model**
+**<Pre-segmentation using OneFormer Model>**
 + (input) sample img -> (output) OneFormer_coco
   > run oneformer_convert_coco_json.ipynb
   + RectLabel import할 coco json 생성
