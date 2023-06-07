@@ -39,7 +39,7 @@ ___
 ___
 
 
-**<Pre-segmentation using SOTA>**
+**<Pre-segmentation using OneFormer Model>**
 + (input) sample img -> (output) OneFormer_coco
   > run oneformer_convert_coco_json.ipynb
   + RectLabel import할 coco json 생성
