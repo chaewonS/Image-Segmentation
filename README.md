@@ -38,6 +38,7 @@ ___
 
 ___
 
+
 **<Pre-segmentation using SOTA>**
 + (input) sample img -> (output) OneFormer_coco
   > run oneformer_convert_coco_json.ipynb
@@ -45,6 +46,7 @@ ___
   + OneFormer 모델 (Panoptic Segmentation 높은 정확도)
 
 **<Panoptic FCN input img & json>**
+  
 + (input) Screenshots -> (output) Color
   > run create_RGBA_multi.py
   + gtFine_color.png 생성
