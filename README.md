@@ -36,8 +36,6 @@ ___
   + color.png 생성 완료
   + labelIds.png 생성 완료
 
-___
-
 ### <Pre-segmentation using OneFormer Model>
 
 + (input) sample img -> (output) OneFormer_coco
