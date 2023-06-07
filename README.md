@@ -45,6 +45,9 @@ ___
     RectLabel에서 Export한 all_objects.png (indexed color mask images using class ID) + coco.json (annotations/counts 정보)
   + color.png 생성 완료
   + labelIds.png 생성 완료
++ 자동화 스크립트 생성
+  + main.py
+  + instance_pixel_all_object_multi.py 
 ___
 
 ### 1. Pre-segmentation using OneFormer Model
