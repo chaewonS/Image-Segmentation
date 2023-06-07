@@ -40,6 +40,7 @@ ___
 
 
 **<Pre-segmentation using SOTA>**
+**<Panoptic FCN input img & json>**
 + (input) sample img -> (output) OneFormer_coco
   > run oneformer_convert_coco_json.ipynb
   + RectLabel import할 coco json 생성
