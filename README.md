@@ -46,8 +46,8 @@ ___
   + color.png 생성 완료
   + labelIds.png 생성 완료
 + 자동화 스크립트 생성
-  + main.py
-  + instance_pixel_all_object_multi.py 수정
+  + main.py 완료
+  + instance_pixel_all_object_multi.py 수정 -> instance.py 완료
 ___
 
 ### 1. Pre-segmentation using OneFormer Model
@@ -78,6 +78,12 @@ ___
   > run create_FCN_json.ipynb & run check_polygons_error.py
   + gtFine_polygons.json 생성
 
+___
+
+### Main 실행
+
++ python instanceIds.py <이미지 폴더 경로> <JSON 파일 경로>
++ python main.py <이미지 폴더 경로>
 
 
 
