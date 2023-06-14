@@ -48,6 +48,8 @@ ___
 + 자동화 스크립트 생성
   + main.py 완료
   + instance_pixel_all_object_multi.py 수정 -> instance.py 완료
++ Unlabeled 매핑
+  + 중복으로 labeling된 부분은 어떻게 처리?
 ___
 
 ### 1. Pre-segmentation using OneFormer Model
