@@ -1,6 +1,5 @@
 
-![Image_segmentation_process-removebg-preview](https://github.com/chaewonS/Image-Segmentation-Auto-Labeling/assets/81732426/e65e827f-9e8c-4340-8a74-b84e1243095a)
-
+![Image_segmentation_process](https://github.com/chaewonS/Image-Segmentation-Auto-Labeling/assets/81732426/16c262ab-be37-40ef-bc51-1de29daa5ac5)
 
 ## Preparation
 ### CUDA 11.1 + Torch 1.9
