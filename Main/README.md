@@ -1,5 +1,5 @@
 
-![Image_segmentation_process](https://github.com/IoRTKETI/Pre-segmentation/assets/122510029/fc160f21-bf75-4cd7-8976-382405035071)
+![Image_segmentation_process-removebg-preview](https://github.com/chaewonS/Image-Segmentation-Auto-Labeling/assets/81732426/e65e827f-9e8c-4340-8a74-b84e1243095a)
 
 
 ## Preparation
