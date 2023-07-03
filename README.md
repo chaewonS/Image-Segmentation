@@ -50,7 +50,7 @@ ___
   + main.py 완료
   + instance_pixel_all_object_multi.py 수정 -> instance.py 완료
 + Unlabeled 매핑
-  + 중복으로 labeling된 부분은 어떻게 처리?
+  + 중복으로 labeling된 부분은 어떻게 처리? -> 둘 중 한 개의 객체로 자동 labeling됨
 ___
 
 ### 1. Pre-segmentation using OneFormer Model
