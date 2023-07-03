@@ -1,6 +1,7 @@
 # KETI Project1 (3/9~)
 # Image-Segmentation, Auto Labeling
 for Autonomous Driving and Real-time Object Detection
+![Image_segmentation_process](https://github.com/chaewonS/Image-Segmentation-Auto-Labeling/assets/81732426/40411106-c5f4-4be4-a15d-a0a3080b1845)
 
 ## OneFormer: One Transformer to Rule Universal Image Segmentation
 ### Panoptic Segmentation on Cityscapes
