@@ -19,9 +19,12 @@ def rename_and_move(all_objects_folder, labelIds_folder):
         os.makedirs(labelIds_folder)
 
     for file_path in glob.glob(os.path.join(all_objects_folder, search_string)):
-        new_file_name = os.path.basename(file_path).replace("_all_objects.png", "_gtFine_labelIds.png")
-        new_file_path = os.path.join(labelIds_dir, new_file_name)
-        shutil.copyfile(file_path, new_file_path)
+        mask = np.array(Image.open(file_path), dtype=np.uint16)
+        mask = np.where((mask >= 1) & (mask <= 38), mask - 1, mask)
+        new_file_name = os.path.basename(file_path).replace("_leftImg8bit_all_objects.png", "_gtFine_labelIds.png")
+        new_file_path = os.path.join(labelIds_folder, new_file_name)
+        Image.fromarray(mask).save(new_file_path)
+
 
 def create_Color(filename):
     if filename.endswith(".jpg"):
@@ -39,8 +42,9 @@ def create_Color(filename):
             for j in range(image_array.shape[1]):
                 image_array[i, j, 3] = alpha_value
 
-        file_parts = filename.split("_")
-        file_name = f"{file_parts[0]}_{file_parts[1]}_gtFine_color.png"
+        # file_parts = filename.split("_")
+        # file_name = f"{file_parts[0]}_{file_parts[1]}_{file_parts[2]}_{file_parts[3]}_gtFine_color.png"
+        file_name = filename.replace("_leftImg8bit.jpg", "_gtFine_color.png")
         result_image = Image.fromarray(image_array).resize(target_size)
         output_filepath = os.path.join(color_new_img_dir, file_name)
         result_image.save(output_filepath)
@@ -67,8 +71,9 @@ def create_Polygon(labelme_folder, polygon_folder):
                 fcn_dict['imgWidth'] = data['imageWidth']
                 fcn_dict['objects'] = objects
 
-                name, ext = filename.split('.')
-                output_filename = name + "_gtFine_polygons" + "." + ext
+                # name, ext = filename.split('.')
+                # output_filename = name + "_gtFine_polygons" + "." + ext
+                output_filename = filename.replace("_leftImg8bit.json", "") + "_gtFine_polygons.json"
                 output_filepath = os.path.join(polygon_folder, output_filename)
 
                 with open(output_filepath, "w", encoding="utf-8") as fo:
@@ -135,6 +140,7 @@ if __name__ == "__main__":
 
     rename_and_move(all_objects_dir, labelIds_dir)
     create_Polygon(labelme_dir, polygon_dir)
+    Check_Error_Polygon(polygon_dir)
 
     pool = Pool()
     pool.map(create_Color, all_file)
