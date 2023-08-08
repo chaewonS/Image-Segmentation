@@ -87,6 +87,8 @@ ___
 
 + python instanceIds.py <이미지 폴더 경로> <JSON 파일 경로>
 + python main.py <이미지 폴더 경로>
++ python create_RGBA.py <Polygon 폴더 경로>
++ python rename.py <날짜>
 
 
 
