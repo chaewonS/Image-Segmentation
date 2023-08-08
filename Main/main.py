@@ -25,30 +25,6 @@ def rename_and_move(all_objects_folder, labelIds_folder):
         new_file_path = os.path.join(labelIds_folder, new_file_name)
         Image.fromarray(mask).save(new_file_path)
 
-
-def create_Color(filename):
-    if filename.endswith(".jpg"):
-        image = Image.open(os.path.join(color_img_dir, filename))
-
-        width, height = image.size
-        target_size = (width, height)
-
-        image_rgba = image.convert('RGBA')
-        image_array = np.array(image_rgba)
-
-        alpha_value = 255
-
-        for i in range(image_array.shape[0]):
-            for j in range(image_array.shape[1]):
-                image_array[i, j, 3] = alpha_value
-
-        # file_parts = filename.split("_")
-        # file_name = f"{file_parts[0]}_{file_parts[1]}_{file_parts[2]}_{file_parts[3]}_gtFine_color.png"
-        file_name = filename.replace("_leftImg8bit.jpg", "_gtFine_color.png")
-        result_image = Image.fromarray(image_array).resize(target_size)
-        output_filepath = os.path.join(color_new_img_dir, file_name)
-        result_image.save(output_filepath)
-
 def create_Polygon(labelme_folder, polygon_folder):
     for filename in os.listdir(labelme_folder):
         if filename.endswith(".json"):
@@ -119,10 +95,6 @@ if __name__ == "__main__":
         sys.exit(1)
 
     argv1 = sys.argv[1]
-    # Create Color
-    color_img_dir = f"/home/ubuntu/cw/OneFormer/input/Screenshots/{argv1}"
-    color_new_img_dir = f"/home/ubuntu/cw/OneFormer/output/Color/{argv1}"
-    all_file = set(os.listdir(color_img_dir))
     # Create LabelIds
     all_objects_dir = f"/home/ubuntu/cw/OneFormer/input/All_objects/{argv1}"
     labelIds_dir = f"/home/ubuntu/cw/OneFormer/output/LabelIds/{argv1}"
@@ -134,15 +106,10 @@ if __name__ == "__main__":
     img_files = os.listdir(labelme_dir)
     img_files.sort()
 
-    if os.path.exists(color_new_img_dir):
-        shutil.rmtree(color_new_img_dir)
-    os.makedirs(color_new_img_dir)
-
     rename_and_move(all_objects_dir, labelIds_dir)
     create_Polygon(labelme_dir, polygon_dir)
     Check_Error_Polygon(polygon_dir)
 
     pool = Pool()
-    pool.map(create_Color, all_file)
     pool.close()
     pool.join()
