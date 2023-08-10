@@ -1,4 +1,4 @@
-# KETI Project (3/9~)
+# KETI Project (20230309~202308)
 # Image-Segmentation, Auto Labeling
 for Autonomous Driving and Real-time Object Detection
 ![Image_segmentation_process](https://github.com/chaewonS/Image-Segmentation-Auto-Labeling/assets/81732426/40411106-c5f4-4be4-a15d-a0a3080b1845)
