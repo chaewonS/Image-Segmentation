@@ -53,6 +53,8 @@ ___
     + Screenshots은 원본 이미지의 RGB값을 가져옴, 레이블링한 이미지의 RGB값으로 매칭필요
 + Unlabeled 매핑
   + 중복으로 labeling된 부분은 어떻게 처리? -> 둘 중 한 개의 객체로 자동 labeling됨
++ 외부 업체 레이블링 요청
+  + 훈련 맞춤 파일 이름 변경 -> rename.py 완료
 ___
 
 ### 1. Pre-segmentation using OneFormer Model
@@ -64,23 +66,27 @@ ___
 
 ### 2. Panoptic FCN input img & json
   
-+ (input) Screenshots -> (output) Color
-  > run create_RGBA_multi.py
++ (input) Polygon json -> (output) Color
+  > run create_RGBA_multi.py (X)
+  > run Main/create_RGBA.py
   + gtFine_color.png 생성
   + 투명도 포험, 파일 이름 변경
 
 + (input) All objects & RectLabel_coco json -> (output) InstanceIds
   > run instance_pixel_all_object_multi.py
+  > run Main/instanceIds.py
   + gtFine_instanceIds.png 생성
   + 사람, 자동차 등 (인스턴스 구분 가능한) 객체들 카테고리 ID 입력
 
 + (input) All objects -> (output) LabelIds
   > run rename.py
+  > run Main/main.py
   + gtFine_labelIds.png 생성
   + 파일 이름 변경
   
 + (input) Labelme json -> (output) Polygon json
   > run create_FCN_json.ipynb & run check_polygons_error.py
+  > run Main/main.py
   + gtFine_polygons.json 생성
 
 ___
