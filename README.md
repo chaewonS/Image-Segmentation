@@ -1,7 +1,7 @@
 # KETI Project (20230309~202308)
 # Image-Segmentation, Auto Labeling
 for Autonomous Driving and Real-time Object Detection
-- 한국통신학회,
+- 한국통신학회 투고, accepted
   - PanopticFCN 모델 기반 스크래치 학습과 전이 학습 비교 및 성능 분석
   - 실외 공장 이미지 데이터셋을 이용한 PanopticFCN 모델의 성능 분석
 
