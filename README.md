@@ -1,6 +1,10 @@
 # KETI Project (20230309~202308)
 # Image-Segmentation, Auto Labeling
 for Autonomous Driving and Real-time Object Detection
+- 한국통신학회,
+  - PanopticFCN 모델 기반 스크래치 학습과 전이 학습 비교 및 성능 분석
+  - 실외 공장 이미지 데이터셋을 이용한 PanopticFCN 모델의 성능 분석
+
 ![Image_segmentation_process](https://github.com/chaewonS/Image-Segmentation-Auto-Labeling/assets/81732426/40411106-c5f4-4be4-a15d-a0a3080b1845)
 
 ## OneFormer: One Transformer to Rule Universal Image Segmentation
@@ -101,6 +105,5 @@ ___
 + python main.py <이미지 폴더 경로>
 + python create_RGBA.py <Polygon 폴더 경로>
 + python rename.py <날짜>
-
 
 
